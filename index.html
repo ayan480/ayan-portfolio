@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ayan Chakraborty | Mobile Application Developer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+  --bg: #0b0b0b;
+  --card: #121212;
+  --text: #eaeaea;
+  --muted: #9a9a9a;
+  --accent: #d6b25e;
+}
+
+.light {
+  --bg: #f6f6f6;
+  --card: #ffffff;
+  --text: #111;
+  --muted: #555;
+  --accent: #8b6b1f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+section {
+  margin-bottom: 80px;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  border-left: 4px solid var(--accent);
+  padding-left: 14px;
+}
+
+p {
+  color: var(--muted);
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.header span {
+  color: var(--accent);
+}
+
+.subtitle {
+  margin-top: 14px;
+  max-width: 700px;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+/* Skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill {
+  padding: 8px 14px;
+  border: 1px solid #333;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+/* Projects */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.project h3 {
+  margin-bottom: 8px;
+}
+
+.project a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Contact */
+.contact a {
+  display: block;
+  color: var(--accent);
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  border-top: 1px solid #222;
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 { font-size: 34px; }
+  h2 { font-size: 24px; }
+  .header { flex-direction: column; align-items: flex-start; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <section class="header">
+    <div>
+      <h1>Ayan <span>Chakraborty</span></h1>
+      <p class="subtitle">
+        Senior Mobile Application Developer (Android, Flutter, iOS)
+        focused on scalable architecture and high-quality mobile experiences.
+      </p>
+    </div>
+
+    <div>
+      <button class="btn" onclick="toggleTheme()">🌗 Theme</button>
+      <a class="btn" href="Profile.pdf" download>⬇ Download CV</a>
+    </div>
+  </section>
+
+  <!-- SUMMARY -->
+  <section>
+    <h2>Professional Summary</h2>
+    <p>
+      Experienced Android & Flutter Developer with expertise in Kotlin, Java, Dart,
+      Jetpack Compose, MVVM, MVI, Bloc, GetX, Provider, SOLID principles,
+      Firebase, payment integrations, REST APIs, and app publishing.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <div class="skill">Android</div>
+      <div class="skill">Kotlin</div>
+      <div class="skill">Java</div>
+      <div class="skill">Flutter</div>
+      <div class="skill">Dart</div>
+      <div class="skill">Jetpack Compose</div>
+      <div class="skill">MVVM / MVI</div>
+      <div class="skill">Bloc / GetX / Provider</div>
+      <div class="skill">Firebase</div>
+      <div class="skill">Coroutines</div>
+      <div class="skill">REST APIs</div>
+      <div class="skill">Git / GitHub / GitLab</div>
+      <div class="skill">Play Store / App Store</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+      <div class="card project">
+        <h3>Sales Force Automation (SFA) App</h3>
+        <p>
+          Flutter-based enterprise app with offline SQLite support,
+          distributor & order management, and sync-enabled architecture.
+        </p>
+        <a href="https://github.com/your-github/sfa-app" target="_blank">GitHub →</a>
+      </div>
+
+      <div class="card project">
+        <h3>Digital Warranty & Bill Organizer</h3>
+        <p>
+          Flutter app for storing bills, warranty tracking,
+          reminders, and claim management using Provider.
+        </p>
+        <a href="https://github.com/your-github/warranty-app" target="_blank">GitHub →</a>
+      </div>
+
+      <div class="card project">
+        <h3>Android Login & Dashboard App</h3>
+        <p>
+          Jetpack Compose app with MVI architecture,
+          OTP authentication, API integration, and navigation.
+        </p>
+        <a href="https://github.com/your-github/android-compose-app" target="_blank">GitHub →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section>
+    <h2>Experience</h2>
+
+    <div class="card">
+      <h3>Senior Associate Consultant — Infosys</h3>
+      <p>Sep 2024 – Present</p>
+    </div>
+
+    <div class="card">
+      <h3>Senior Software Engineer — Techno Exponent</h3>
+      <p>Sep 2023 – Sep 2024</p>
+    </div>
+
+    <div class="card">
+      <h3>Software Developer — MaxMobility Pvt. Ltd.</h3>
+      <p>Jan 2021 – Sep 2023</p>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section>
+    <h2>Education</h2>
+
+    <div class="card">
+      <h3>MCA — JIS College of Engineering</h3>
+      <p>2016 – 2019</p>
+    </div>
+
+    <div class="card">
+      <h3>BCA — ABS Academy</h3>
+      <p>2013 – 2016</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <h2>Contact</h2>
+    <a href="mailto:ayan480@gmail.com">ayan480@gmail.com</a>
+    <a href="tel:+919126720548">+91 91267 20548</a>
+    <a href="https://www.linkedin.com/in/ayan-ayu-chakraborty" target="_blank">LinkedIn</a>
+    <p>Kolkata, West Bengal, India</p>
+  </section>
+
+</div>
+
+<footer>
+  © 2026 Ayan Chakraborty • Mobile Application Developer
+</footer>
+
+<script>
+function toggleTheme() {
+  document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>
